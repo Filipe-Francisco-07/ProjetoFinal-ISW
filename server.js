@@ -60,10 +60,10 @@ app.get('/get-all', async (req, res) => {
 
   try {
     console.log('Rota /get-all chamada');
-    connection = await connectToDatabase(); // Certifique-se de que a função connectToDatabase está correta
+    connection = await connectToDatabase(); 
     const result = await connection.execute('SELECT * FROM nodetab');
     console.log('Dados retornados:', result.rows);
-    res.json(result.rows); // Retorna os dados no formato JSON
+    res.json(result.rows); 
   } catch (error) {
     console.error('Erro ao consultar dados:', error);
     res.status(500).send('Erro ao consultar dados no banco');
