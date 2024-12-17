@@ -107,7 +107,7 @@ function App() {
 
       const result = await response.text();
       setResponseMessage(result);
-      setSelectedFile(null); /
+      setSelectedFile(null); 
     } catch (error) {
       console.error('Erro ao fazer upload do arquivo:', error);
       setResponseMessage('Erro ao fazer upload do arquivo.');
