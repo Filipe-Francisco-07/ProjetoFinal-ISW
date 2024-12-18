@@ -19,8 +19,8 @@ const provider = new oci.common.ConfigFileAuthenticationDetailsProvider(
 );
 
 
-const namespaceName = 'grr7dzhnrfiq'; // Substitua pelo seu namespace
-const bucketName = 'bucket-teste'; // Substitua pelo nome do seu bucket
+const namespaceName = 'grr7dzhnrfiq';
+const bucketName = 'bucket-teste'; 
 
 const objectStorageClient = new oci.objectstorage.ObjectStorageClient({ authenticationDetailsProvider: provider });
 
