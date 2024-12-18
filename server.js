@@ -14,7 +14,10 @@ app.use(express.json());
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-const provider = new oci.common.ConfigFileAuthenticationDetailsProvider();
+const provider = new oci.common.ConfigFileAuthenticationDetailsProvider(
+  process.env.OCI_CONFIG_PATH || '~/.oci/config'
+);
+
 
 const namespaceName = 'grr7dzhnrfiq'; // Substitua pelo seu namespace
 const bucketName = 'bucket-teste'; // Substitua pelo nome do seu bucket
@@ -181,4 +184,3 @@ app.put('/update', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server teste at http://localhost:${port}`);
 });
-
