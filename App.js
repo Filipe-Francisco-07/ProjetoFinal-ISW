@@ -126,13 +126,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>React Frontend Completo</h1>
+        <h1>React frontend</h1>
 
         <h2>Dados do Bucket</h2>
         <button onClick={fetchBucketData}>Buscar Dados do Bucket</button>
         <pre>{bucketData}</pre>
 
-        <h2>Inserir Dados no Banco</h2>
+        <h2>Inserir dados no banco</h2>
         <input
           type="number"
           name="id"
@@ -149,11 +149,11 @@ function App() {
         />
         <button onClick={submitData}>Enviar</button>
 
-        <h2>Fazer Upload de Arquivo</h2>
+        <h2>Fazer upload de arquivo</h2>
         <input type="file" onChange={handleFileChange} />
         <button onClick={uploadFile}>Upload</button>
 
-        <h2>Dados do Banco</h2>
+        <h2>Dados do banco</h2>
         <table>
           <thead>
             <tr>
